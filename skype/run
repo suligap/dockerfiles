@@ -1,0 +1,3 @@
+#!/bin/bash
+
+sh -c 'PULSE_SERVER=/run/pulse/native skype'

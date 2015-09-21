@@ -1,7 +1,7 @@
 # Mostly copied from:
 # https://github.com/jfrazelle/dockerfiles/blob/7771ae9e988c7f15b57741342da2196020410f33/skype/Dockerfile
 
-FROM debian:latest
+FROM debian:jessie
 
 RUN dpkg --add-architecture i386 && \
 	apt-get update && \

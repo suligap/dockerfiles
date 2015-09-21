@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# This was tested to work on Ubuntu 15.04.
+# Allows the container to:
+# - use the camera
+# - read /etc/localtime
+# - talk to X server
+# - talk to pulseaudio
+
 # Allow all hosts to connect to X server.
 # TODO: Maybe not very secure. Find a way to only allow skype from this
 # container.

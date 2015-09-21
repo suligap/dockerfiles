@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Allow all hosts to connect to X server.
+# TODO: Maybe not very secure. Find a way to only allow skype from this
+# container.
+xhost +
+
 docker run -it --rm \
 	--device /dev/video0 \
 	-v /etc/localtime:/etc/localtime:ro \
@@ -8,3 +13,6 @@ docker run -it --rm \
 	-e DISPLAY=unix$DISPLAY \
 	--name skype \
 	suligap/skype
+
+# Restrict access to X server again.
+xhost -
